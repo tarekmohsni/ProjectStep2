@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "4755e53d-eae6-406b-81b2-daf6ba4dd3fe",
+		"name": "FleetCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12596519"
+	},
+	"item": [
+		{
+			"name": "create fleet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\": \"2\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register vehicle",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"fleetId\": \"2111\",\r\n \"plateNumber\": \"ABC\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/register-vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register-vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localize vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"fleetId\": \"20\",\r\n \"plateNumber\": \"ABC\",\r\n  \"location\": {\"latitude\": 1.23, \"longitude\": 6.56, \"altitude\": 789}\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/localize-vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"localize-vehicle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
